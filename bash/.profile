@@ -25,3 +25,10 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+# rust lang config
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# golang config
+export PATH=$PATH:/usr/local/go/bin
+
