@@ -1,0 +1,44 @@
+set highlightedyank
+set ideajoin
+set surround
+set incsearch
+set relativenumber
+set number
+" set clipboard+=ideaput
+
+let mapleader = " "
+map <Leader>a :action $SelectAll<CR>
+map <Leader>b :action GoToDeclaration<CR>
+" or something like <C-S>c
+map <Leader>c :action $Copy<CR>
+map <Leader>d :action Debug<CR>
+map <Leader>e :action RecentFiles<CR>
+map <Leader>f :action Find<CR>
+map <Leader>g :action GoToLine<CR>
+map <Leader>h :action TypeHierarchy<CR>
+map <Leader>i :action GotoImplementation<CR>
+map <Leader>I :action ImplementMethods<CR>
+map <Leader>k :action Vcs.QuickListPopupAction<CR>
+" todo: see what's the best mapping for 'm'
+map <Leader>m :action EditorScrollToCenter<CR>
+" todo: see what's the best mapping for 'n'
+map <Leader>n :action FileChooser.NewFolder<CR>
+map <Leader>o :action OverrideMethods<CR>
+" todo: see what's the best mapping for 'p'
+map <Leader>p :action ParameterInfo<CR>
+map <Leader>q :action QuickJavaDoc<CR>
+map <Leader>R :action RenameElement<CR>
+map <Leader>r :action Replace<CR>
+" todo: see what's the best mapping for 's'
+map <Leader>s :action SaveAll<CR>
+map <Leader>t :action Vcs.UpdateProject<CR>
+map <Leader>u :action GotoSuperMethod<CR>
+map <Leader>v :action $Paste<CR>
+map <Leader>w :action EditorSelectWord<CR>
+map <Leader>x :action $Cut<CR>
+map <Leader>y :action EditorDeleteLine<CR>
+map <leader>[ :action EditorCodeBlockStart<CR>
+map <leader>] :action EditorCodeBlockEnd<CR>
+
+imap <C-v> :action $Paste<CR>
+
