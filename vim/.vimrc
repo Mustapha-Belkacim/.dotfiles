@@ -204,6 +204,11 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 
+:let mapleader = " "
+" Create newlines without entering insert mode
+nmap <CR> o<Esc>k
+nmap <leader><CR> O<Esc>j
+
 " Easy access to this file
 :command Config edit ~/.vimrc
 

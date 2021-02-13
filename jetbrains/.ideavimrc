@@ -43,5 +43,9 @@ nnoremap <leader>ypn :action CopyPathWithLineNumber<CR>
 nnoremap <leader>ypr :action CopyPathFromRepositoryRootProvider<CR>
 " e.g:bar/foo.txt
 nnoremap <leader>yps :action CopySourceRootPath<CR>
+
+nmap <CR> o<Esc>k
+nmap <leader><CR> O<Esc>j
+
 imap <C-v> <ESC>:action $Paste<CR>
 
