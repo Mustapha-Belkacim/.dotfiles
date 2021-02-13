@@ -4,12 +4,10 @@ set surround
 set incsearch
 set relativenumber
 set number
-" set clipboard+=ideaput
 
 let mapleader = " "
 map <Leader>a :action $SelectAll<CR>
 map <Leader>b :action GoToDeclaration<CR>
-" or something like <C-S>c
 map <Leader>c :action $Copy<CR>
 map <Leader>d :action Debug<CR>
 map <Leader>e :action RecentFiles<CR>
@@ -24,7 +22,6 @@ map <Leader>m :action EditorScrollToCenter<CR>
 " todo: see what's the best mapping for 'n'
 map <Leader>n :action FileChooser.NewFolder<CR>
 map <Leader>o :action OverrideMethods<CR>
-" todo: see what's the best mapping for 'p'
 map <Leader>p :action ParameterInfo<CR>
 map <Leader>q :action QuickJavaDoc<CR>
 map <Leader>R :action RenameElement<CR>
