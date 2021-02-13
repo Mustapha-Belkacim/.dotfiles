@@ -212,5 +212,5 @@ nmap <CR> o<Esc>k
 nmap <leader><CR> O<Esc>j
 
 " Easy access to this file
-:command Config edit ~/.vimrc
+:command! Config edit ~/.vimrc
 
