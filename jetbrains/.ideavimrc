@@ -19,8 +19,7 @@ map <Leader>I :action ImplementMethods<CR>
 map <Leader>k :action Vcs.QuickListPopupAction<CR>
 " todo: see what's the best mapping for 'm'
 map <Leader>m :action EditorScrollToCenter<CR>
-" todo: see what's the best mapping for 'n'
-map <Leader>n :action FileChooser.NewFolder<CR>
+map <Leader>n :action NewFile<CR>
 map <Leader>o :action OverrideMethods<CR>
 map <Leader>p :action ParameterInfo<CR>
 map <Leader>q :action QuickJavaDoc<CR>
