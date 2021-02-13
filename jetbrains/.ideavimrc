@@ -35,5 +35,5 @@ map <Leader>y :action EditorDeleteLine<CR>
 map <leader>[ :action EditorCodeBlockStart<CR>
 map <leader>] :action EditorCodeBlockEnd<CR>
 
-imap <C-v> :action $Paste<CR>
+imap <C-v> <ESC>:action $Paste<CR>
 
