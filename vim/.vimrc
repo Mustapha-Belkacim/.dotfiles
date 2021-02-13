@@ -205,6 +205,8 @@ inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 
 :let mapleader = " "
+" Clear search
+noremap <silent><leader>/ :nohls<CR>
 " Create newlines without entering insert mode
 nmap <CR> o<Esc>k
 nmap <leader><CR> O<Esc>j
