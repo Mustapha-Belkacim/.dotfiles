@@ -25,8 +25,7 @@ map <Leader>p :action ParameterInfo<CR>
 map <Leader>q :action QuickJavaDoc<CR>
 map <Leader>R :action RenameElement<CR>
 map <Leader>r :action Replace<CR>
-" todo: see what's the best mapping for 's'
-map <Leader>s :action SaveAll<CR>
+map <Leader>s :action context.save<CR>
 map <Leader>t :action Vcs.UpdateProject<CR>
 map <Leader>u :action GotoSuperMethod<CR>
 map <Leader>v :action $Paste<CR>
