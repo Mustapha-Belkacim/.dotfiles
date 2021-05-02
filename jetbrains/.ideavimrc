@@ -7,9 +7,9 @@ set number
 
 let mapleader = " "
 map <Leader>a :action $SelectAll<CR>
-map <Leader>b :action GoToDeclaration<CR>
+map <Leader>b :action BreakpointActionsGroup<CR>
 map <Leader>c :action $Copy<CR>
-map <Leader>d :action Debug<CR>
+map <Leader>d :action DebuggingActionsGroup<CR>
 map <Leader>e :action RecentFiles<CR>
 map <Leader>f :action Find<CR>
 map <Leader>g :action GoToLine<CR>
