@@ -50,6 +50,8 @@ OSH_THEME="bakke"
 completions=(
   composer
   ssh
+  pip
+  pip3
 )
 
 # Which aliases would you like to load? (aliases can be found in ~/.oh-my-bash/aliases/*)
