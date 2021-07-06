@@ -17,6 +17,7 @@ map <Leader>h :action TypeHierarchy<CR>
 map <Leader>i :action GotoImplementation<CR>
 map <Leader>I :action ImplementMethods<CR>
 map <Leader>k :action Vcs.QuickListPopupAction<CR>
+map <Leader>l :action context.load<CR>
 " todo: see what's the best mapping for 'm'
 map <Leader>m :action EditorScrollToCenter<CR>
 map <Leader>n :action NewFile<CR>
@@ -26,7 +27,7 @@ map <Leader>q :action QuickJavaDoc<CR>
 map <Leader>R :action RenameElement<CR>
 map <Leader>r :action Replace<CR>
 map <Leader>s :action context.save<CR>
-map <Leader>t :action Vcs.UpdateProject<CR>
+map <Leader>t :action task.actions<CR>
 map <Leader>u :action GotoSuperMethod<CR>
 map <Leader>v :action $Paste<CR>
 map <Leader>w :action EditorSelectWord<CR>
