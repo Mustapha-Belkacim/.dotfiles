@@ -188,6 +188,7 @@ autocmd BufNewFile,BufRead *.yml,*.html,*.css,*.scss,*.json,*.js,*.ts
     \ set tabstop=2 softtabstop=2 shiftwidth=2
 
 colorscheme gruvbox
+set bg=dark
 
 set rtp+=~/.fzf
 
