@@ -179,6 +179,8 @@ set foldlevel=99
 " Enable folding with the spacebar
 nnoremap <space> za
 
+set nowrap
+
 " Tab settings
 set tabstop=4 softtabstop=4
 set shiftwidth=4
