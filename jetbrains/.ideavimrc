@@ -12,7 +12,7 @@ map <Leader>c :action $Copy<CR>
 map <Leader>d :action DebuggingActionsGroup<CR>
 map <Leader>e :action RecentFiles<CR>
 map <Leader>f :action Find<CR>
-map <Leader>g :action GoToLine<CR>
+map <Leader>g :action GotoLine<CR>
 map <Leader>h :action TypeHierarchy<CR>
 map <Leader>i :action GotoImplementation<CR>
 map <Leader>I :action ImplementMethods<CR>
