@@ -33,6 +33,8 @@ map <Leader>v :action $Paste<CR>
 map <Leader>w :action EditorSelectWord<CR>
 map <Leader>x :action $Cut<CR>
 map <Leader>y :action EditorDeleteLine<CR>
+map <Leader>z :action ExpandAllToLevel1<CR>
+map <Leader>Z :action ExpandAllToLevel5<CR>
 map <leader>[ :action EditorCodeBlockStart<CR>
 map <leader>] :action EditorCodeBlockEnd<CR>
 
