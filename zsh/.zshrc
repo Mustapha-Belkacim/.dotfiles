@@ -75,8 +75,6 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-# vim key bindigs
-bindkey -v
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -101,3 +99,10 @@ fi
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
+
+# vim key bindigns in the command line 
+bindkey -v
+
+# fzf config file
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
