@@ -1,3 +1,5 @@
+set number
+set relativenumber
 colorscheme gruvbox
 filetype * xdg-open
 
