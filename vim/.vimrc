@@ -195,14 +195,13 @@ call plug#end()
 let g:airline_powerline_fonts = 1
 set t_Co=256
 
-" Where to store backup files
-set backupdir=~/.vim/.backup//
-
-" Where to store undo files
-set undodir=~/.vim/.undo//
-
-" Where to store swap files
-set directory=~/.vim/.swp//
+" Set it a bakcup dir, undo dir, and swap directory.
+" The double slash at the end ensures that there is no conflict in case of two
+" files having the same name. The `,.` allow vim to use the current directory
+" if the former doesn't exist.
+set backupdir=~/.vim/.backup//,.
+set undodir=~/.vim/.undo//,.
+set directory=~/.vim/.swp//,.
 
 inoremap <C-c> <Esc>
 
@@ -248,7 +247,7 @@ inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 
 :let mapleader = " "
-" Clear search
+" Clear search highlight
 noremap <silent><leader>/ :nohls<CR>
 " Create newlines without entering insert mode
 nmap <CR> o<Esc>k
