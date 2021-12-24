@@ -144,7 +144,47 @@ inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
 " ###### Additional Settings #########
-"
+
+" Install vim-plug if not found
+" NOTE: since this is failing silentily you need git and curl installed
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+
+" TODO: check why is it not running on startup on a barebone linux instalation
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
+
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+" Project file tree with on-demand loading
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+" Undo history tree branching
+Plug 'mbbill/undotree', { 'on':  'NERDTreeToggle' }
+" Airline status bar
+Plug 'vim-airline/vim-airline'
+" Airline status bar themes
+Plug 'vim-airline/vim-airline-themes'
+" To comment code easly
+Plug 'tpope/vim-commentary'
+" Git integration
+Plug 'tpope/vim-fugitive'
+Plug 'rbong/vim-flog'
+" Rust lang support
+Plug 'rust-lang/rust.vim'
+" Gruvbox color scheme
+Plug 'morhetz/gruvbox'
+Plug 'jremmen/vim-ripgrep'
+" Install FZF fuzzy search binary and vim plugin
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+call plug#end()
+
 " Powerline status bar
 " https://github.com/powerline/powerline
 " python3 from powerline.vim import setup as powerline_setup
