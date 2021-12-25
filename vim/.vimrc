@@ -219,6 +219,8 @@ set foldlevel=99
 nnoremap <space> za
 
 set nowrap
+set list
+set listchars=tab:>-,trail:.
 
 " Tab settings
 set tabstop=4 softtabstop=4
