@@ -185,12 +185,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 call plug#end()
 
-" Powerline status bar
-" https://github.com/powerline/powerline
-" python3 from powerline.vim import setup as powerline_setup
-" python3 powerline_setup()
-" python3 del powerline_setup
-
 " Airline status bar
 let g:airline_powerline_fonts = 1
 set t_Co=256
