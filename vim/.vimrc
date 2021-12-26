@@ -179,7 +179,6 @@ Plug 'rbong/vim-flog'
 Plug 'rust-lang/rust.vim'
 " Gruvbox color scheme
 Plug 'morhetz/gruvbox'
-Plug 'jremmen/vim-ripgrep'
 " Install FZF fuzzy search binary and vim plugin
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
