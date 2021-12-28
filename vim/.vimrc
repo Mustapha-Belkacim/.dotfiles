@@ -182,6 +182,8 @@ Plug 'morhetz/gruvbox'
 " Install FZF fuzzy search binary and vim plugin
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-surround'
+Plug 'machakann/vim-highlightedyank'
 call plug#end()
 
 " Airline status bar
