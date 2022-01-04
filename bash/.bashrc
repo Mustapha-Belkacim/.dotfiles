@@ -101,7 +101,7 @@ alias ohmybash="vim ~/.oh-my-bash"
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENV_PYTHON=/usr/bin/python3
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source ~/.local/bin/virtualenvwrapper.sh
+[ -f ~/.local/bin/virtualenvwrapper.sh ] && source ~/.local/bin/virtualenvwrapper.sh
 
 # fzf config file
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
