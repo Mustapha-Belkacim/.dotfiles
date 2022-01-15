@@ -4,8 +4,9 @@ set surround
 set incsearch
 set relativenumber
 set number
+set scrolloff=5
 
-let mapleader = " "
+let leader = " "
 map <Leader>a :action $SelectAll<CR>
 map <Leader>b :action BreakpointActionsGroup<CR>
 map <Leader>c :action $Copy<CR>
@@ -22,33 +23,27 @@ map <Leader>l :action context.load<CR>
 map <Leader>m :action EditorScrollToCenter<CR>
 map <Leader>n :action NewFile<CR>
 map <Leader>o :action OverrideMethods<CR>
+" todo: check why it's not working and if it can be removed all together
 map <Leader>p :action ParameterInfo<CR>
 map <Leader>q :action QuickJavaDoc<CR>
-map <Leader>R :action RenameElement<CR>
-map <Leader>r :action Replace<CR>
+map <Leader>r :action Refactorings.QuickListPopupAction<CR>
+map <Leader>R :action Replace<CR>
 map <Leader>s :action context.save<CR>
 map <Leader>t :action task.actions<CR>
 map <Leader>u :action GotoSuperMethod<CR>
 map <Leader>v :action $Paste<CR>
 map <Leader>w :action EditorSelectWord<CR>
 map <Leader>x :action $Cut<CR>
-map <Leader>y :action EditorDeleteLine<CR>
+nnoremap <leader>yP :action CopyAbsolutePath<CR>
+nnoremap <leader>ypn :action CopyPathWithLineNumber<CR>
+nnoremap <leader>ypr :action CopyPathFromRepositoryRootProvider<CR>
+nnoremap <leader>yps :action CopySourceRootPath<CR>
 map <Leader>z :action ExpandAllToLevel1<CR>
 map <Leader>Z :action ExpandAllToLevel5<CR>
 map <leader>[ :action EditorCodeBlockStart<CR>
 map <leader>] :action EditorCodeBlockEnd<CR>
 
-" e.g:/home/repository/src/bar/foo.txt
-nnoremap <leader>yP :action CopyAbsolutePath<CR>
-" e.g:/home/repository/src/bar/foo.txt:46
-nnoremap <leader>ypn :action CopyPathWithLineNumber<CR>
-" e.g:src/bar/foo.txt
-nnoremap <leader>ypr :action CopyPathFromRepositoryRootProvider<CR>
-" e.g:bar/foo.txt
-nnoremap <leader>yps :action CopySourceRootPath<CR>
-
 nmap <CR> o<Esc>k
 nmap <leader><CR> O<Esc>j
-
 imap <C-v> <ESC>:action $Paste<CR>
 
