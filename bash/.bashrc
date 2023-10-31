@@ -76,7 +76,8 @@ source $OSH/oh-my-bash.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # Preferred editor 
 export VISUAL=vim
@@ -96,12 +97,6 @@ export EDITOR='vim'
 # Example aliases
 alias bashconfig="vim ~/.bashrc"
 alias ohmybash="vim ~/.oh-my-bash"
-
-# virtualenvwrapper config
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENV_PYTHON=/usr/bin/python3
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-[ -f ~/.local/bin/virtualenvwrapper.sh ] && source ~/.local/bin/virtualenvwrapper.sh
 
 # fzf config file
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
