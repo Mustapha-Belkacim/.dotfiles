@@ -5,6 +5,7 @@ set incsearch
 set relativenumber
 set number
 set scrolloff=5
+set clipboard+=unnamed
 
 let mapleader = " "
 map <Leader>a :action $SelectAll<CR>
@@ -13,18 +14,20 @@ map <Leader>c :action $Copy<CR>
 map <Leader>d :action DebuggingActionsGroup<CR>
 map <Leader>e :action RecentFiles<CR>
 map <Leader>f :action Find<CR>
+map <leader>F :action FindInPath<CR>
 map <Leader>g :action GotoLine<CR>
 map <Leader>h :action TypeHierarchy<CR>
 map <Leader>i :action GotoImplementation<CR>
 map <Leader>I :action ImplementMethods<CR>
 map <Leader>k :action Vcs.QuickListPopupAction<CR>
 map <Leader>l :action context.load<CR>
-" todo: see what's the best mapping for 'm'
-map <Leader>m :action EditorScrollToCenter<CR>
+map <Leader>m :action ReformatCode<CR>
 map <Leader>n :action NewFile<CR>
 map <Leader>o :action OverrideMethods<CR>
-" todo: check why it's not working and if it can be removed all together
-map <Leader>p :action ParameterInfo<CR>
+map <Leader>p :action CopyAbsolutePath<CR>
+map <leader>pn :action CopyPathWithLineNumber<CR>
+map <leader>pr :action CopyPathFromRepositoryRootProvider<CR>
+map <leader>ps :action CopySourceRootPath<CR>
 map <Leader>q :action QuickJavaDoc<CR>
 map <Leader>r :action Refactorings.QuickListPopupAction<CR>
 map <Leader>R :action Replace<CR>
@@ -34,10 +37,6 @@ map <Leader>u :action GotoSuperMethod<CR>
 map <Leader>v :action $Paste<CR>
 map <Leader>w :action EditorSelectWord<CR>
 map <Leader>x :action $Cut<CR>
-nnoremap <leader>yP :action CopyAbsolutePath<CR>
-nnoremap <leader>ypn :action CopyPathWithLineNumber<CR>
-nnoremap <leader>ypr :action CopyPathFromRepositoryRootProvider<CR>
-nnoremap <leader>yps :action CopySourceRootPath<CR>
 map <Leader>z :action ExpandAllToLevel1<CR>
 map <Leader>Z :action ExpandAllToLevel5<CR>
 map <leader>[ :action EditorCodeBlockStart<CR>
@@ -46,4 +45,3 @@ map <leader>] :action EditorCodeBlockEnd<CR>
 nmap <CR> o<Esc>k
 nmap <leader><CR> O<Esc>j
 imap <C-v> <ESC>:action $Paste<CR>
-

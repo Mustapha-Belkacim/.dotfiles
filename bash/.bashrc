@@ -48,10 +48,8 @@ OSH_THEME="bakke"
 # Example format: completions=(ssh git bundler gem pip pip3)
 # Add wisely, as too many completions slow down shell startup.
 completions=(
-  composer
+  git
   ssh
-  pip
-  pip3
 )
 
 # Which aliases would you like to load? (aliases can be found in ~/.oh-my-bash/aliases/*)

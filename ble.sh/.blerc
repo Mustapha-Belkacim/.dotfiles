@@ -1,0 +1,5 @@
+ble-color-setface auto_complete fg=242,bg=235
+ble-color-setface auto_complete fg=white,bg=69
+ble-color-setface auto_complete fg=240,underline,italic
+
+bleopt exec_errexit_mark=''
