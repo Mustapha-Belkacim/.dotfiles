@@ -4,18 +4,18 @@ set surround
 set incsearch
 set relativenumber
 set number
-set scrolloff=5
+set scrolloff=3
 set clipboard+=unnamed
 
 let mapleader = " "
 map <Leader>a :action $SelectAll<CR>
-map <Leader>b :action BreakpointActionsGroup<CR>
+map <Leader>b :action ToggleLineBreakpoint<CR>
 map <Leader>c :action $Copy<CR>
 map <Leader>d :action DebuggingActionsGroup<CR>
 map <Leader>e :action RecentFiles<CR>
 map <Leader>f :action Find<CR>
 map <leader>F :action FindInPath<CR>
-map <Leader>g :action GotoLine<CR>
+map <Leader>g :action Generate<CR>
 map <Leader>h :action TypeHierarchy<CR>
 map <Leader>i :action GotoImplementation<CR>
 map <Leader>I :action ImplementMethods<CR>
@@ -45,3 +45,5 @@ map <leader>] :action EditorCodeBlockEnd<CR>
 nmap <CR> o<Esc>k
 nmap <leader><CR> O<Esc>j
 imap <C-v> <ESC>:action $Paste<CR>
+nmap <Tab> gt
+nmap <S-Tab> gT
