@@ -20,3 +20,4 @@ brew install vifm
 brew install lazygit
 brew install --cask karabiner-elements
 brew install --cask finicky
+brew install gawk
