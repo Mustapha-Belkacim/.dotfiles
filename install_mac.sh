@@ -21,3 +21,9 @@ brew install lazygit
 brew install --cask karabiner-elements
 brew install --cask finicky
 brew install gawk
+brew install fdupes
+brew install git-delta
+brew install terminal-notifier
+# ble.sh
+git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git
+make -C ble.sh install PREFIX=~/.local
