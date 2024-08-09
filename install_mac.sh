@@ -8,6 +8,7 @@ brew install stow
 # oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 brew install --cask docker
+brew install --cask iterm2
 brew install fd
 brew install rg
 brew install fzf
