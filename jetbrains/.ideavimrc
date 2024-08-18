@@ -20,6 +20,7 @@ map <Leader>h :action TypeHierarchy<CR>
 map <Leader>i :action GotoImplementation<CR>
 map <Leader>I :action ImplementMethods<CR>
 map <Leader>k :action Vcs.QuickListPopupAction<CR>
+map <Leader>K :action Git.Menu<CR>
 map <Leader>l :action context.load<CR>
 map <Leader>m :action ReformatCode<CR>
 map <Leader>n :action NewFile<CR>
