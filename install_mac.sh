@@ -14,7 +14,8 @@ brew install rg
 brew install fzf
 brew install htop
 brew install bat
-brew install exa
+brew install lsd
+brew install eza
 brew install tldr
 brew install trash-cli
 brew install vifm
@@ -26,6 +27,7 @@ brew install gawk
 brew install fdupes
 brew install git-delta
 brew install terminal-notifier
+brew install font-hack-nerd-font
 # ble.sh
 git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git
 make -C ble.sh install PREFIX=~/.local
