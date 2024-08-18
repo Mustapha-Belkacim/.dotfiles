@@ -32,4 +32,4 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # golang config
 export PATH=$PATH:/usr/local/go/bin
 
-ssh-add --apple-load-keychain
+ssh-add --apple-load-keychain &>/dev/null
