@@ -109,5 +109,8 @@ export NVM_DIR="$HOME/.nvm"
 
 
 # Load Angular CLI autocompletion.
-source <(ng completion script)
+if command -v ng &> /dev/null
+then
+    source <(ng completion script)
+fi
 source ~/.local/share/blesh/ble.sh
