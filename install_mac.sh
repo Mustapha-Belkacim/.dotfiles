@@ -19,6 +19,7 @@ brew install eza
 brew install tldr
 brew install trash-cli
 brew install vifm
+brew install neovim
 brew install lazygit
 brew install --cask karabiner-elements
 brew install --cask finicky
