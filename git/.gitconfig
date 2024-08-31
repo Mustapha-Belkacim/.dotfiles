@@ -18,5 +18,9 @@
 
 [diff]
     colorMoved = default
+
 [push]
     autoSetupRemote = true
+
+[init]
+   defaultBranch = main
