@@ -1,0 +1,7 @@
+[window]
+startup_mode= "Fullscreen"
+padding.x = 10
+decorations = "None"
+
+[font]
+size = 10
