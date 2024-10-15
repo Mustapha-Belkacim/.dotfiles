@@ -24,6 +24,7 @@ brew install lazygit
 brew install --cask karabiner-elements
 brew install --cask finicky
 brew install --cask insomnia
+brew install --cask rectangle
 brew install gawk
 brew install fdupes
 brew install git-delta
