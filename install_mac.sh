@@ -49,7 +49,7 @@ brew install --cask karabiner-elements
 brew install --cask finicky
 brew install --cask insomnia
 brew install --cask rectangle
-brew install --cask alacritty
+brew install --cask alacritty --no-quarantine
 brew install gawk
 brew install fdupes
 brew install git-delta
