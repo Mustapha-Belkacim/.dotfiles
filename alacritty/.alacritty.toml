@@ -1,7 +1,21 @@
+general.import = [
+  "~/.config/alacritty/themes/gruvbox_dark.toml"
+]
+
+[ env ]
+TERM = "xterm-256color"
+
 [window]
-startup_mode= "Fullscreen"
 padding.x = 10
-decorations = "None"
+startup_mode = "Maximized" # options: "Windowed" | "Maximized" | "Fullscreen" | "SimpleFullscreen"
+decorations = "Buttonless"
 
 [font]
-size = 10
+normal.family = "Hack Nerd Font"
+size = 14
+offset = { x = 0, y = 3 }
+
+# [keyboard]
+# Enter CopyMode with Command + Shift + V
+# bindings = [{ "V", "Control|Shift", "ToggleViMode" },]
+
