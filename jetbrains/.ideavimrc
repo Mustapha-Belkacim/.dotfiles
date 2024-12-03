@@ -7,6 +7,7 @@ set number
 set scrolloff=3
 set clipboard+=unnamed
 set belloff=all
+set ignorecase
 
 let mapleader = " "
 map <Leader>a :action $SelectAll<CR>
