@@ -1,10 +1,9 @@
 [user]
     name = Mustapha-Belkacim
-	email = 26289307+Mustapha-Belkacim@users.noreply.github.com
 
 [core]
     pager = delta
-    editor = vim
+    editor = nvim
 
 [interactive]
     diffFilter = delta --color-only

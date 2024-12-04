@@ -79,8 +79,8 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # Preferred editor 
-export VISUAL=vim
-export EDITOR='vim'
+export VISUAL=nvim
+export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -94,8 +94,8 @@ export EDITOR='vim'
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias bashconfig="vim ~/.bashrc"
-alias ohmybash="vim ~/.oh-my-bash"
+alias bashconfig="nvim ~/.bashrc"
+alias ohmybash="nvim ~/.oh-my-bash"
 
 # fzf config file
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
