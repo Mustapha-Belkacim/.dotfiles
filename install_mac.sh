@@ -49,6 +49,8 @@ brew install --cask karabiner-elements
 brew install --cask finicky
 brew install --cask insomnia
 brew install --cask rectangle
+# raycast can replace rectangle
+brew install --cask raycast
 brew install --cask alacritty --no-quarantine
 brew install gawk
 brew install fdupes
