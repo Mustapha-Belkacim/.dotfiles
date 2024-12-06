@@ -4,11 +4,18 @@ require("config.lazy")
 vim.keymap.set("n", "<Tab>", ":bnext<CR>")
 vim.keymap.set("n", "<S-Tab>", ":bprev<CR>")
 
--- Auto-save on file change
-vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost", "InsertLeave" }, {
+-- Auto-save buffer on various events
+local auto_save_events = {
+  "BufLeave",
+  "FocusLost",
+  "InsertLeave",
+  "TextChanged",
+  "TextChangedI",
+}
+vim.api.nvim_create_autocmd(auto_save_events, {
   callback = function()
     if vim.bo.modifiable and vim.bo.modified then
-      vim.cmd("write")
+      vim.cmd("silent! write")
     end
   end,
 })
