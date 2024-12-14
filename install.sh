@@ -44,6 +44,7 @@ pip install pipenv
 curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh
 cargo install git-delta
 cargo install --locked yazi-fm yazi-cli
+cargo install --locked zellij
 docker
 docker-compose
 
