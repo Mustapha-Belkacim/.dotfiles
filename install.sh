@@ -24,6 +24,7 @@ apt install trash-cli
 apt install ffmpeg
 apt install fdupes
 apt install cmus
+apt install tmux
 
 #programming
 # lazygit
