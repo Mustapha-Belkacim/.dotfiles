@@ -15,7 +15,26 @@ normal.family = "Hack Nerd Font"
 size = 14
 offset = { x = 0, y = 3 }
 
+# NOTE: work in progress, trying to use copyMode in Mac
+#
 # [keyboard]
 # Enter CopyMode with Command + Shift + V
 # bindings = [{ "V", "Control|Shift", "ToggleViMode" },]
-
+#
+# [[keyboard.bindings]]
+# key = "Space"
+# mods = "Control|Shift"
+# mode = "~Vi"
+# action = "ToggleViMode"
+#
+# [[keyboard.bindings]]
+# key = "C"
+# mods = "Control"
+# mode = "Vi"
+# action = "Copy"
+#
+# [[keyboard.bindings]]
+# key = "Escape"
+# mode = "Vi"
+# action = "ToggleViMode"
+#
