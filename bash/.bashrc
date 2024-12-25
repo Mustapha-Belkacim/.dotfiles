@@ -78,7 +78,7 @@ source $OSH/oh-my-bash.sh
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# Preferred editor 
+# Preferred editor
 export VISUAL=nvim
 export EDITOR='nvim'
 
@@ -100,18 +100,18 @@ alias ohmybash="nvim ~/.oh-my-bash"
 # fzf config file
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-# vim key bindigns in the command line 
+# vim key bindigns in the command line
 set -o vi
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
+export MANPAGER="nvim +Man!"
 
 # Load Angular CLI autocompletion.
-if command -v ng &> /dev/null
-then
-    source <(ng completion script)
+if command -v ng &>/dev/null; then
+  source <(ng completion script)
 fi
 source ~/.local/share/blesh/ble.sh
 export PATH="$PATH:/opt/nvim-linux64/bin"
