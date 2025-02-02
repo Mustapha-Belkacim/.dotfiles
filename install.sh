@@ -25,6 +25,7 @@ apt install ffmpeg
 apt install fdupes
 apt install cmus
 apt install tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 #programming
 # lazygit
