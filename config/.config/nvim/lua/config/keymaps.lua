@@ -2,5 +2,7 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
-vim.keymap.set("n", "<Tab>", ":bnext<CR>")
-vim.keymap.set("n", "<S-Tab>", ":bprev<CR>")
+local map = vim.keymap.set
+
+map("n", "<Tab>", "<CMD>bnext<CR>")
+map("n", "<S-Tab>", "<CMD>bprev<CR>")
