@@ -50,3 +50,5 @@ nmap <leader><CR> O<Esc>j
 imap <C-v> <ESC>:action $Paste<CR>
 nmap <Tab> gt
 nmap <S-Tab> gT
+nmap <C-l> :action NextSplitter<CR>
+nmap <C-h> :action PrevSplitter<CR>
