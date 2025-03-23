@@ -14,6 +14,9 @@ normal.family = "Hack Nerd Font"
 size = 14
 offset = { x = 0, y = 3 }
 
+[scrolling]
+history = 100000
+
 # NOTE: work in progress, trying to use copyMode in Mac
 #
 # [keyboard]
