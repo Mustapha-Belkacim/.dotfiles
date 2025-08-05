@@ -60,7 +60,6 @@ brew install font-hack-nerd-font
 brew install superfile
 brew install stow
 brew install tmux
-brew install zoxide
 brew install --cask orbstack
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # ble.sh
