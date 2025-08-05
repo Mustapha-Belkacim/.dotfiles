@@ -32,11 +32,12 @@ map <leader>pn :action CopyPathWithLineNumber<CR>
 map <leader>pr :action CopyPathFromRepositoryRootProvider<CR>
 map <leader>ps :action CopySourceRootPath<CR>
 map <Leader>q :action QuickJavaDoc<CR>
+map <leader>Q :action QuickChangeScheme<CR>
 map <Leader>r :action Refactorings.QuickListPopupAction<CR>
 map <Leader>R :action Replace<CR>
 map <Leader>s :action NewScratchFile<CR>
 map <Leader>t :action task.actions<CR>
-map <Leader>u :action GotoSuperMethod<CR>
+map <leader>u :action GotoSuperMethod<CR>
 map <Leader>v :action $Paste<CR>
 map <Leader>w :action EditorSelectWord<CR>
 map <Leader>x :action $Cut<CR>
