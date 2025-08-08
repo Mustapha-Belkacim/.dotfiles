@@ -43,13 +43,10 @@ brew install trash-cli
 brew install vim --with-override-system-vi
 brew install neovim
 brew install vifm
-brew install neovim
 brew install lazygit
 brew install --cask karabiner-elements
 brew install --cask finicky
 brew install --cask insomnia
-brew install --cask rectangle
-# raycast can replace rectangle
 brew install --cask raycast
 brew install --cask alacritty --no-quarantine
 brew install gawk
