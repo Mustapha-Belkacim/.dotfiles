@@ -9,6 +9,21 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
+# alternative theme
+# ZSH_THEME="kphoen"
+# ZSH_THEME="strug"
+# ZSH_THEME="amuse"
+# ZSH_THEME="avit"
+# ZSH_THEME="bira"
+# ZSH_THEME="blinks"
+# ZSH_THEME="candy"
+# ZSH_THEME="crcandy"
+# ZSH_THEME="dst"
+# ZSH_THEME="dstufft"
+# ZSH_THEME="frontcube"
+# ZSH_THEME="jispwoso"
+# ZSH_THEME="jonathan"
+
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -63,7 +78,7 @@ ZSH_THEME="robbyrussell"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_CUSTOM=$HOME/.dotfiles/zsh/oh-my-zsh-custom
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -71,9 +86,12 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    common-aliases
     git
+    vi-mode
     zsh-autosuggestions
     zsh-syntax-highlighting
+    z
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -83,17 +101,13 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+export EDITOR='nvim'
+export VISUAL=nvim
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+# export ARCHFLAGS="-arch $(uname -m)"
 
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
@@ -106,3 +120,14 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
+
+alias c='clear'
+alias cat='bat'
+alias ls='eza'
+alias vi='nvim'
+alias vif='vi $(fzf)'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# export MANPAGER="nvim +Man!"

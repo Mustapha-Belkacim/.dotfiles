@@ -39,7 +39,6 @@ brew install bat
 brew install lsd
 brew install eza
 brew install tldr
-brew install trash-cli
 brew install vim --with-override-system-vi
 brew install neovim
 brew install vifm
@@ -65,5 +64,6 @@ git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyo
 make -C ble.sh install PREFIX=~/.local
 # autocomplete fo zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 brew cleanup
