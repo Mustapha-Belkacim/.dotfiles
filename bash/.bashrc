@@ -108,6 +108,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 export MANPAGER="nvim +Man!"
+# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Load Angular CLI autocompletion.
 if command -v ng &>/dev/null; then
