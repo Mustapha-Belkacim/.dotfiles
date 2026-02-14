@@ -16,9 +16,6 @@
     side-by-side = true
     line-numbers = true
     hyperlinks = true
-    syntax-theme = gruvbox-dark
-    ; syntax-theme = "Catppuccin-mocha"
-    light = false      # set to true if you're in a terminal w/ a light background color
 
 [diff]
     tool = nvimdiff
