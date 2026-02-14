@@ -21,8 +21,15 @@
     light = false      # set to true if you're in a terminal w/ a light background color
 
 [diff]
+    tool = nvimdiff
     colorMoved = default
     algorithm = histogram
+
+[difftool]
+    prompt = false
+
+[difftool "nvimdiff"]
+    cmd = nvim -d "$LOCAL" "$REMOTE"
 
 [commit]
     verbose = true
