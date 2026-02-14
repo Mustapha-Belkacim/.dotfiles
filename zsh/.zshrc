@@ -93,6 +93,8 @@ plugins=(
     zsh-syntax-highlighting
     z
 )
+export REPORTTIME=1
+export TIMEFMT=$'\n \e[1;34mCPU Stats:\e[0m  user: %*Us,  system:%*Ss (%P CPU),  total: %*Es' # %J = Job name (the command)
 
 source $ZSH/oh-my-zsh.sh
 
