@@ -1,0 +1,15 @@
+git:
+  pagers:
+    - colorArg: always
+      # Auto-detect light/dark mode from system (macOS & Linux)
+      pager: >
+        if [ "$(uname)" = "Darwin" ]; then
+          IS_DARK=$(defaults read -g AppleInterfaceStyle 2>/dev/null);
+        elif [ -n "$XDG_CURRENT_DESKTOP" ]; then
+          IS_DARK=$(gsettings get org.gnome.desktop.interface color-scheme 2>/dev/null | grep -i dark);
+        fi;
+        if [ -n "$IS_DARK" ]; then
+          delta --paging=never --line-numbers --hyperlinks --dark;
+        else
+          delta --paging=never --line-numbers --hyperlinks --light --syntax-theme=GitHub;
+        fi
