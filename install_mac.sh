@@ -53,6 +53,7 @@ brew install fdupes
 brew install git-delta
 brew install terminal-notifier
 brew install font-hack-nerd-font
+brew install font-fira-code
 brew install superfile
 brew install stow
 brew install tmux
