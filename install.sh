@@ -104,4 +104,7 @@ apt install obs-studio
 # apt-get update
 # apt install open-fprintd fprintd-clients python3-validity
 
+# uv python package manager
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
 apt autoremove
