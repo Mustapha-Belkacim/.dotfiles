@@ -30,52 +30,78 @@
   "vim.incsearch": true,
   "vim.highlightedyank.enable": true,
   "vim.normalModeKeyBindingsNonRecursive": [
-    // split navigation and buffer switching
+
+    { "before": ["g", "h"], "commands": ["editor.action.showDefinitionPreviewHover"] },
+    { "before": ["<CR>"], "commands": ["editor.action.insertLineAfter", "cursorUp"] },
+    { "before": ["<leader>", "<CR>"], "commands": ["editor.action.insertLineBefore", "cursorDown"] },
+    { "before": ["leader", "a"], "commands": ["editor.action.selectAll"] },
+    { "before": ["<leader>", "e"], "commands": ["workbench.action.toggleSidebarVisibility"] },
+
+    { "before": ["<leader>", "t"], "commands": ["workbench.action.tasks.showTasks"] },
+
+
+    // Replace / find / copy-path / other common actions
+    { "before": ["<leader>", "p", "a"], "commands": ["copyFilePath"] },
+    { "before": ["<leader>", "p", "n"], "commands": ["extension.copyPathWithLine"] }, // not working
+
+    // Find
+    { "before": ["<leader>", "<leader>"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["<leader>", "f", "f"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["<leader>", "f", "b"], "commands": ["workbench.action.showAllEditors"] },
+    { "before": ["<leader>", "f", "r"], "commands": ["workbench.action.openRecent"] },
+    { "before": ["<leader>", "f", "n"], "commands": ["workbench.action.files.newUntitledFile"] },
+
+    // Buffers
     { "before": ["<Tab>"], "commands": [":bnext"] },
     { "before": ["<S-Tab>"], "commands": [":bprevious"] },
+    { "before": ["<leader>", "b", "d"], "commands": ["workbench.action.closeActiveEditor"] },
+    { "before": ["<leader>", "b", "a"], "commands": ["workbench.action.showAllEditors"] },
+    { "before": ["<leader>", "b", "Q"], "commands": ["workbench.action.closeAllEditors"] },
+
+    // Code
+    { "before": ["<leader>", "c", "q"], "commands": ["editor.action.quickFix"] },
+    { "before": ["<leader>", "c", "r"], "commands": ["editor.action.rename"] },
+    { "before": ["<leader>", "c", "f"], "commands": ["editor.action.formatDocument"] },
+    { "before": ["<leader>", "c", "i"], "commands": ["editor.action.showHover"] },
+
+    // Debug
+    { "before": ["<leader>", "d", "b"], "commands": ["editor.debug.action.toggleBreakpoint"] },
+
+    // Diagnostics
+    { "before": ["<leader>", "x", "d"], "commands": ["workbench.action.problems.focus"] },
+    { "before": ["<leader>", "x", "q"], "commands": ["editor.action.quickFix"] },
+    { "before": ["[", "d"], "commands": ["editor.action.marker.prev"] },
+    { "before": ["]", "d"], "commands": ["editor.action.marker.next"] },
+
+    // Git
+    { "before": ["<leader>", "g", "g"], "commands": ["workbench.view.scm"] },
+    { "before": ["<leader>", "g", "b"], "commands": ["git.openChange"] },
+
+    // Search
+    { "before": ["<leader>", "/"], "commands": ["workbench.action.findInFiles"] },
+    { "before": ["<leader>", "s", "s"], "commands": ["workbench.action.findInFiles"] },
+    { "before": ["<leader>", "s", "r"], "commands": ["editor.action.startFindReplaceAction"] },
+    { "before": ["<leader>", "s", "k"], "commands": ["workbench.action.showCommands"] },
+    { "before": ["<leader>", ":"], "commands": ["workbench.action.showCommands"] },
+
+    // Terminal / toggles
+    { "before": ["<leader>", "t", "t"], "commands": ["workbench.action.terminal.toggleTerminal"] },
+
+    // Windows
+    { "before": ["<leader>", "w", "v"], "commands": ["workbench.action.splitEditorRight"] },
+    { "before": ["<leader>", "w", "s"], "commands": ["workbench.action.splitEditorDown"] },
+    { "before": ["<leader>", "w", "h"], "commands": ["workbench.action.focusLeftGroup"] },
+    { "before": ["<leader>", "w", "j"], "commands": ["workbench.action.focusBelowGroup"] },
+    { "before": ["<leader>", "w", "k"], "commands": ["workbench.action.focusAboveGroup"] },
+    { "before": ["<leader>", "w", "l"], "commands": ["workbench.action.focusRightGroup"] },
+    { "before": ["<leader>", "w", "d"], "commands": ["workbench.action.closeGroup"] },
+    { "before": ["<leader>", "w", "o"], "commands": ["workbench.action.closeOtherGroups"] },
     { "before": ["leader", "\\"], "commands": [":vsplit"] },
     { "before": ["leader", "-"], "commands": [":split"] },
     { "before": ["leader", "h"], "commands": ["workbench.action.focusLeftGroup"] },
     { "before": ["leader", "j"], "commands": ["workbench.action.focusBelowGroup"] },
     { "before": ["leader", "k"], "commands": ["workbench.action.focusAboveGroup"] },
     { "before": ["leader", "l"], "commands": ["workbench.action.focusRightGroup"] },
-
-    { "before": ["[", "d"], "commands": ["editor.action.marker.prev"] },
-    { "before": ["]", "d"], "commands": ["editor.action.marker.next"] },
-    { "before": ["<leader>", "c", "a"], "commands": ["editor.action.quickFix"] },
-    { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
-    { "before": ["leader", "c", "f"], "commands": ["editor.action.formatDocument"] },
-    { "before": ["g", "h"], "commands": ["editor.action.showDefinitionPreviewHover"] },
-    { "before": ["<CR>"], "commands": ["editor.action.insertLineAfter", "cursorUp"] },
-    { "before": ["<leader>", "<CR>"], "commands": ["editor.action.insertLineBefore", "cursorDown"] },
-
-    { "before": ["leader", "a"], "commands": ["editor.action.selectAll"] },
-    { "before": ["<leader>", "b"], "commands": ["editor.debug.action.toggleBreakpoint"] },
-    { "before": ["<leader>", "c"], "commands": ["editor.action.clipboardCopyAction"] },
-    { "before": ["<leader>", "v"], "commands": ["editor.action.clipboardPasteAction"] },
-    { "before": ["<leader>", "x"], "commands": ["editor.action.clipboardCutAction"] },
-
-    { "before": ["<leader>", "m"], "commands": ["editor.action.formatDocument"] },
-    { "before": ["<leader>", "n"], "commands": ["workbench.action.files.newUntitledFile"] },
-    { "before": ["<leader>", "s"], "commands": ["workbench.action.files.newUntitledFile"] },
-    { "before": ["<leader>", "t"], "commands": ["workbench.action.tasks.showTasks"] },
-
-    // Navigation / go-to equivalents
-    { "before": ["<leader>", "i"], "commands": ["editor.action.goToImplementation"] },
-    { "before": ["<leader>", "I"], "commands": ["editor.action.codeAction"] },
-    { "before": ["<leader>", "g"], "commands": ["editor.action.quickFix"] },
-    { "before": ["<leader>", "h"], "commands": ["editor.action.goToTypeDefinition"] },
-    { "before": ["<leader>", "u"], "commands": ["editor.action.goToDeclaration"] },
-
-    // Replace / find / copy-path / other common actions
-    { "before": ["<leader>", "R"], "commands": ["editor.action.startFindReplaceAction"] },
-    { "before": ["<leader>", "f"], "commands": ["workbench.action.quickOpen"] },
-    { "before": ["<leader>", "F"], "commands": ["workbench.action.findInFiles"] },
-    { "before": ["<leader>", "p"], "commands": ["copyFilePath"] },
-    { "before": ["<leader>", "pn"], "commands": ["extension.copyPathWithLine"] }, // not working
-    { "before": ["<leader>", "q"], "commands": ["editor.action.showHover"] },
-    { "before": ["<leader>", "k"], "commands": ["workbench.action.showCommands"] },
-    { "before": ["<leader>", "K"], "commands": ["git.openChange"] },// not working
 
   ],
   "vim.visualModeKeyBindings": [
@@ -97,6 +123,7 @@
       "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "files.autoSave": "afterDelay",
+  "files.trimTrailingWhitespace": true,
   "git.blame.statusBarItem.enabled": true,
   "git.blame.editorDecoration.enabled": false,
   "git.autofetch": true,
@@ -118,7 +145,9 @@
   "atlascode.rovodev.enabled": false,
   "docker.extension.enableComposeLanguageServer": false,
   "chat.tools.terminal.autoApprove": {
-    "docker compose": true
+    "docker compose": true,
+    "bat": true,
+    "uv": true
   },
   "chat.mcp.gallery.enabled": true,
   "chat.viewSessions.orientation": "stacked",
