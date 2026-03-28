@@ -6,3 +6,5 @@ local map = vim.keymap.set
 
 map("n", "<Tab>", "<CMD>bnext<CR>")
 map("n", "<S-Tab>", "<CMD>bprev<CR>")
+map("n", "<CR>", "o<Esc>k")
+map("n", "<leader><CR>", "O<Esc>j")
