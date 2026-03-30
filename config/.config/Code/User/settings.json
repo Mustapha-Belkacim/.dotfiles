@@ -144,12 +144,20 @@
   "atlascode.jira.startWorkBranchTemplate.customTemplate": "{{{prefix}}}{{{issueKey}}}_{{{summary}}}",
   "atlascode.rovodev.enabled": false,
   "docker.extension.enableComposeLanguageServer": false,
+  "chat.fontSize": 14,
+  "chat.editor.fontSize": 14,
   "chat.tools.terminal.autoApprove": {
     "docker compose": true,
     "bat": true,
     "uv": true
   },
   "chat.mcp.gallery.enabled": true,
+  "chat.tools.urls.autoApprove": {
+    "https://pypi.org/pypi/langgraph/json": {
+      "approveRequest": true,
+      "approveResponse": false
+    }
+  },
   "chat.viewSessions.orientation": "stacked",
   "gitlab.duoCodeSuggestions.openTabsContext": false,
   "gitlab.duoCodeSuggestions.enabled": false,
