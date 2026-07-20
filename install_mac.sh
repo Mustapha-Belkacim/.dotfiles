@@ -61,6 +61,7 @@ brew install stats
 brew install --cask orbstack
 brew install uv
 brew install copilot-cli
+brew install glab
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # ble.sh
 git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git
