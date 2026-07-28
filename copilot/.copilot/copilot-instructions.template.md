@@ -79,10 +79,6 @@ updated as Markdown.
 
 Set the ticket **issue type** (default `Task`) depending on what I requested.
 
-After the ticket is created, **always ask me whether I want to add it to the active sprint**.
-Only if I say yes, add it to the currently active sprint (Sprint field `{{JIRA_SPRINT_FIELD}}`,
-board `{{JIRA_BOARD_ID}}`) — first resolve the active sprint's id, then set it on the issue.
-
 ## Looking up Jira tickets
 
 - Whenever I ask you to look up, find, read, or search for a Jira ticket/issue,
