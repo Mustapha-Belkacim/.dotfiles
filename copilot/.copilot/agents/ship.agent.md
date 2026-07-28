@@ -52,6 +52,7 @@ type(scope): short imperative summary
 
 `type` ∈ `feat | fix | refactor | chore | docs | test | perf`.
 Never commit secrets. Never force-push a shared branch.
+Don't include co-authors or reviewers in the commit message.
 
 ### 6 — Report
 One tight summary: what changed (files), how it was verified (which checks, results),
