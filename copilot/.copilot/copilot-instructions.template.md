@@ -92,6 +92,15 @@ updated as Markdown.
 
 Set the ticket **issue type** (default `Task`) depending on what I requested.
 
+## Never comment on Jira tickets
+
+- **Never post, submit, or add a comment to a Jira issue.** Do not call
+  `addCommentToJiraIssue` (or any equivalent comment/worklog-creating tool) under any
+  circumstances, even if I seem to ask for it — assume I meant something else and ask.
+- Reading existing comments is fine. Writing them is not.
+- If a task would benefit from a comment, write the text out in the chat so I can post
+  it myself.
+
 ## Looking up Jira tickets
 
 - Whenever I ask you to look up, find, read, or search for a Jira ticket/issue,
