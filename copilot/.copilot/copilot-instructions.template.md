@@ -33,6 +33,18 @@ win over these when they conflict — they describe the project; this describes 
 - Use real evidence over assumption: logs, actual API/JSON payloads, screenshots,
   and error output. When debugging UI or visual issues, ask for a screenshot.
 
+## File operations
+
+- **Never use `rm` (or `rm -rf`) to delete files or directories.** Use a trash
+  utility instead, so anything deleted is recoverable: `trash` (macOS / npm
+  `trash-cli`), `gio trash` or `trash-put` (Linux), or the platform equivalent.
+  If no trash utility is available, stop and ask me rather than falling back to `rm`.
+- **Never delete-and-recreate a file to change it.** Edit the existing file in place
+  with the edit tool. Rewriting from scratch loses history, permissions, and any
+  content you didn't know about.
+- Same rule for renames/moves: use `git mv`/`mv`, not delete + create.
+- Only create a new file when the file genuinely doesn't exist yet.
+
 ## Delegate and parallelize
 
 - Use the right tool for the job. Delegate self-contained research to **explore**,
@@ -56,6 +68,7 @@ win over these when they conflict — they describe the project; this describes 
   `chore`, `docs`, `test`). Body explains *why*, not *what*.
 - Stage only the files that belong to the change. Never commit secrets. Never
   force-push shared branches.
+- Don't include co-authors or reviewers in the commit message.
 
 ## Creating Jira tickets
 
