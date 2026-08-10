@@ -1,7 +1,22 @@
 ---
 name: 'Ship'
 description: 'Drives a change to a verified, committed state through a tight feedback loop: implement → verify → fix → commit. Enforces a test/build gate and never leaves the tree broken. Language-agnostic. Use when implementing a planned change or fixing a bug and you want it landed cleanly.'
-tools: ['read', 'search', 'edit', 'execute', 'agent', 'todo']
+tools:
+  - view
+  - glob
+  - grep
+  - lsp
+  - web_fetch
+  - create
+  - edit
+  - bash
+  - read_bash
+  - stop_bash
+  - sql
+  - task
+  - list_agents
+  - read_agent
+  - write_agent
 ---
 
 # Ship

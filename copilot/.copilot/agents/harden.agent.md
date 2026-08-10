@@ -1,7 +1,22 @@
 ---
 name: 'Harden'
 description: 'Runs an agentic review-and-fix loop: review the diff, triage findings, fix the blocking ones, then re-review until the change comes back clean. Use before pushing or opening a PR on a non-trivial change. Unlike the read-only built-in /review, this agent edits code; each iteration runs a fresh code-review pass so fixes get independently re-checked.'
-tools: ['read', 'search', 'edit', 'execute', 'agent', 'todo']
+tools:
+  - view
+  - glob
+  - grep
+  - lsp
+  - web_fetch
+  - create
+  - edit
+  - bash
+  - read_bash
+  - stop_bash
+  - sql
+  - task
+  - list_agents
+  - read_agent
+  - write_agent
 ---
 
 # Harden
