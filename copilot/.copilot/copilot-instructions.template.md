@@ -56,6 +56,8 @@ win over these when they conflict — they describe the project; this describes 
 ## Prompts and communication
 
 - Be concise. Default to the shortest response that fully answers.
+- When reporting information to me, be extremely concise and sacrifice grammar
+  for the sake of concision. Fragments, no filler, no preamble, no recap.
 - Make precise, surgical changes that fully address the request. Don't refactor
   unrelated code in the same change; note unrelated issues instead of fixing them.
 - Only comment code where the intent isn't obvious from the code itself.
