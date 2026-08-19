@@ -4,7 +4,7 @@
 
 [core]
 	untrackedCache = true
-	fsmonitor = true
+	fsmonitor = false
     pager = delta
     editor = nvim
 
