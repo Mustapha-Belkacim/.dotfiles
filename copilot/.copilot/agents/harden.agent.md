@@ -88,3 +88,7 @@ findings deliberately left as follow-ups, and a clear verdict — **ready to pus
 - This agent fixes code; if you only want findings, use the built-in `/review` directly.
 - Loop on correctness/security, not on taste.
 - When a spec exists, review against intent (invariants + acceptance criteria), not just the diff.
+
+## Searching code
+- Search contents with ripgrep (`rg` or the ripgrep-backed `grep` tool) and find files with `fd` — they skip `.gitignore`d noise. Don't shell out to `grep -r`/`find`; use `-u`/`-uu` when ignored/hidden files are genuinely needed.
+- If `rg`/`fd` are missing (CI, containers), fall back to `grep`/`find` and say so. Scripts and CI you author stay POSIX unless the repo already depends on `rg`/`fd`.

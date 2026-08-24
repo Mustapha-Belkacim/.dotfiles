@@ -45,6 +45,17 @@ win over these when they conflict — they describe the project; this describes 
 - Same rule for renames/moves: use `git mv`/`mv`, not delete + create.
 - Only create a new file when the file genuinely doesn't exist yet.
 
+## Searching code
+
+- Search contents with ripgrep (`rg` or the ripgrep-backed `grep` tool), find files
+  with `fd`. They skip `.gitignore`d noise, so results stay signal. Don't shell out
+  to `grep -r`/`find` for my searches.
+- Pass `-u`/`-uu` when I actually need ignored or hidden files.
+- If `rg`/`fd` aren't installed (CI, containers, someone else's box), just use
+  `grep`/`find` and mention it — don't stall.
+- Scripts, Makefiles, and CI you write for me stay on POSIX `grep`/`find` unless the
+  repo already depends on `rg`/`fd`.
+
 ## Delegate and parallelize
 
 - Use the right tool for the job. Delegate self-contained research to **explore**,

@@ -104,3 +104,7 @@ user should sanity-check, and the suggested first implementation step. Then stop
 - Keep it lean: a spec is a thinking tool, not a contract. Don't pad it.
 - Don't smuggle in implementation — describe behaviour and constraints, not line-level code.
 - Respect existing repo conventions; read `AGENTS.md` and instruction files first.
+
+## Searching code
+- Search contents with ripgrep (`rg` or the ripgrep-backed `grep` tool) and find files with `fd` — they skip `.gitignore`d noise. Don't shell out to `grep -r`/`find`; use `-u`/`-uu` when ignored/hidden files are genuinely needed.
+- If `rg`/`fd` are missing (CI, containers), fall back to `grep`/`find` and say so. Scripts and CI you author stay POSIX unless the repo already depends on `rg`/`fd`.

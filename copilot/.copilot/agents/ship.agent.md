@@ -81,3 +81,7 @@ and any follow-ups or assumptions worth flagging.
 - If the change genuinely requires breaking an invariant, stop and confirm with the user
   first.
 - Prefer reverting a bad approach and regenerating over piling fixes onto code that fights you.
+
+## Searching code
+- Search contents with ripgrep (`rg` or the ripgrep-backed `grep` tool) and find files with `fd` — they skip `.gitignore`d noise. Don't shell out to `grep -r`/`find`; use `-u`/`-uu` when ignored/hidden files are genuinely needed.
+- If `rg`/`fd` are missing (CI, containers), fall back to `grep`/`find` and say so. Scripts and CI you author stay POSIX unless the repo already depends on `rg`/`fd`.
