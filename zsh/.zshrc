@@ -128,3 +128,6 @@ alias vif='vi $(fzf)'
 
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # export MANPAGER="nvim +Man!"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+
