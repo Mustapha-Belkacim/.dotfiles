@@ -5,10 +5,12 @@ tools:
   - view
   - glob
   - grep
+  - rg
   - lsp
   - web_fetch
   - create
   - edit
+  - apply_patch
   - bash
   - read_bash
   - stop_bash
