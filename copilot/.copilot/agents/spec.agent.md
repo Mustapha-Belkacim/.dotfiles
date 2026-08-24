@@ -19,15 +19,7 @@ tools:
   - list_agents
   - read_agent
   - write_agent
-  - atlassian/getJiraIssue
-  - atlassian/createJiraIssue
-  - atlassian/editJiraIssue
-  - atlassian/searchJiraIssuesUsingJql
-  - atlassian/getJiraIssueRemoteIssueLinks
-  - atlassian/getConfluencePage
-  - atlassian/searchConfluenceUsingCql
-  - atlassian/search
-  - atlassian/fetch
+  - atlassian/*
 ---
 
 # Spec
