@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{TEAM_NAME}} · Sprint Readout · {{SPRINT_RANGE}}</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" id="theme" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css" />
+
+  <style>
+/* @THEME */
+/* @BRAND */
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- 1 · TITLE -->
+      <section data-background-color="#081226">
+        <div class="center">
+          <span class="eyebrow">Sprint Readout · {{SPRINT_RANGE}}</span>
+          <h1>{{HEADLINE_PLAIN}} <span class="grad">{{HEADLINE_ACCENT}}</span></h1>
+          <p class="lead" style="margin-top:24px;">{{SUBTITLE_LINE_1}}<br/>{{SUBTITLE_LINE_2}}</p>
+          <div class="stripe center-block"></div>
+          <p class="small muted" style="margin-top:26px;">{{TEAM_NAME}} · {{PRESENTER_NAME}} · Team Presentation</p>
+        </div>
+        <div class="footer"><span>{{FOOTER_LEFT}}</span><span>Sprint Readout</span></div>
+        <aside class="notes">
+          <p>{{OPENING_FRAME}}</p>
+          <p>Three things I'd like you to take away, and I'll come back to them at the end: {{TAKEAWAY_1}}; {{TAKEAWAY_2}}; {{TAKEAWAY_3}}.</p>
+        </aside>
+      </section>
+
+      <!-- 2 · BY THE NUMBERS (from commit data) -->
+      <section>
+        <span class="eyebrow">At a Glance</span>
+        <h2>The sprint <span class="grad">by the numbers</span></h2>
+        <div class="grid g4" style="margin-top:14px;">
+          <div class="card kpi"><div class="n">{{KPI_1_N}}</div><div class="l">{{KPI_1_LABEL}}</div></div>
+          <div class="card kpi"><div class="n">{{KPI_2_N}}</div><div class="l">{{KPI_2_LABEL}}</div></div>
+          <div class="card kpi"><div class="n">{{KPI_3_N}}</div><div class="l">{{KPI_3_LABEL}}</div></div>
+          <div class="card kpi"><div class="n">{{KPI_4_N}}</div><div class="l">{{KPI_4_LABEL}}</div></div>
+        </div>
+        <div class="grid g3" style="margin-top:22px;">
+          <div class="card center"><h3>{{THEME_1_ICON}} {{THEME_1_TITLE}}</h3><p class="tiny muted">{{THEME_1_TEXT}}</p></div>
+          <div class="card center"><h3>{{THEME_2_ICON}} {{THEME_2_TITLE}}</h3><p class="tiny muted">{{THEME_2_TEXT}}</p></div>
+          <div class="card center"><h3>{{THEME_3_ICON}} {{THEME_3_TITLE}}</h3><p class="tiny muted">{{THEME_3_TEXT}}</p></div>
+        </div>
+        <aside class="notes">
+          <p>{{NUMBERS_NARRATIVE}}</p>
+          <p>Don't read the ticket count as throughput — {{THROUGHPUT_CAVEAT}}.</p>
+        </aside>
+      </section>
+
+      <!-- 3 · WORKSTREAMS (group the Jira keys from commit data) -->
+      <section data-background-color="#081226">
+        <span class="eyebrow">What I Worked On</span>
+        <h2>{{WORKSTREAM_COUNT_WORD}} workstreams</h2>
+        <div class="grid g2" style="margin-top:6px;">
+          <div class="card" style="border-left:3px solid var(--alert);">
+            <h3>1 · {{WS1_TITLE}}</h3>
+            <p class="tiny muted">{{WS1_TICKETS}} — {{WS1_SUMMARY}}</p>
+          </div>
+          <div class="card" style="border-left:3px solid var(--warm);">
+            <h3>2 · {{WS2_TITLE}}</h3>
+            <p class="tiny muted">{{WS2_TICKETS}} — {{WS2_SUMMARY}}</p>
+          </div>
+          <div class="card" style="border-left:3px solid var(--accent);">
+            <h3>3 · {{WS3_TITLE}}</h3>
+            <p class="tiny muted">{{WS3_TICKETS}} — {{WS3_SUMMARY}}</p>
+          </div>
+          <div class="card" style="border-left:3px solid var(--gold);">
+            <h3>4 · {{WS4_TITLE}}</h3>
+            <p class="tiny muted">{{WS4_TICKETS}} — {{WS4_SUMMARY}}</p>
+          </div>
+        </div>
+        <aside class="notes">
+          <p>{{WORKSTREAM_CONNECTIONS}}</p>
+          <p>If you only follow one thread, follow {{PRIMARY_THREAD}}.</p>
+        </aside>
+      </section>
+
+      <!-- 4..N · DEEP DIVES — one per major ticket. Duplicate this block.
+           Use the patterns in assets/slide-patterns.md:
+           problem→fix, table-of-failures, code walkthrough, flow diagram, stages. -->
+      <section>
+        <span class="eyebrow">Deep Dive · {{TICKET_KEY}}</span>
+        <h2>{{DEEPDIVE_TITLE_PLAIN}} <span class="grad">{{DEEPDIVE_TITLE_ACCENT}}</span></h2>
+        <div class="pf" style="margin-top:8px;">
+          <div class="card prob">
+            <h3>🔴 {{PROBLEM_TITLE}}</h3>
+            <p class="small muted">{{PROBLEM_TEXT}}</p>
+          </div>
+          <div class="card fix">
+            <h3>🟢 {{FIX_TITLE}}</h3>
+            <p class="small muted">{{FIX_TEXT}}</p>
+          </div>
+        </div>
+        <div class="grid g2" style="margin-top:16px;">
+          <div class="card" style="border-left:3px solid var(--gold);">
+            <h3>💼 Business value</h3>
+            <p class="tiny muted">{{BUSINESS_VALUE}}</p>
+          </div>
+          <div class="card" style="border-left:3px solid var(--accent);">
+            <h3>⚙️ Technical value</h3>
+            <p class="tiny muted">{{TECHNICAL_VALUE}}</p>
+          </div>
+        </div>
+        <p class="small center" style="margin-top:12px;">{{EVIDENCE_LINE}}</p>
+        <aside class="notes">
+          <p>{{DEEPDIVE_NARRATIVE}}</p>
+        </aside>
+      </section>
+
+      <!-- N+1 · SMALLER ITEMS (table generated from commit data) -->
+      <section>
+        <span class="eyebrow">Also Shipped</span>
+        <h2>Smaller items, <span class="grad-warm">real impact</span></h2>
+        <table style="margin-top:14px;">
+          <thead><tr><th>Ticket</th><th>What changed</th><th>Why it matters</th></tr></thead>
+          <tbody>
+            <!-- {{SMALL_ITEM_ROWS}} : <tr><td><span class="mono">KEY-123</span></td><td>…</td><td>…</td></tr> -->
+          </tbody>
+        </table>
+        <aside class="notes"><p>{{SMALL_ITEMS_NARRATIVE}}</p></aside>
+      </section>
+
+      <!-- N+2 · DELIVERY THROUGHPUT (pure commit data) -->
+      <section>
+        <span class="eyebrow">Delivery Data</span>
+        <h2>Where the work <span class="grad">actually went</span></h2>
+        <table style="margin-top:12px;">
+          <thead><tr><th>Repository</th><th>Commits</th><th>Tickets</th><th>Files</th><th>+/−</th></tr></thead>
+          <tbody>
+            <!-- {{REPO_ROWS}} -->
+          </tbody>
+        </table>
+        <p class="small center" style="margin-top:16px;">{{THROUGHPUT_CALLOUT}}</p>
+        <aside class="notes"><p>{{THROUGHPUT_NARRATIVE}}</p></aside>
+      </section>
+
+      <!-- N+3 · CHALLENGES (from sprint-input.md, not from git) -->
+      <section>
+        <span class="eyebrow">Challenges</span>
+        <h2>What made this sprint <span class="grad-warm">hard</span></h2>
+        <div class="grid g2" style="margin-top:10px;">
+          <div class="card" style="border-left:3px solid var(--alert);">
+            <h3>{{CHALLENGE_1_TITLE}}</h3>
+            <p class="small muted">{{CHALLENGE_1_TEXT}}</p>
+            <p class="tiny"><span class="pill hard">{{CHALLENGE_1_TAG}}</span></p>
+          </div>
+          <div class="card" style="border-left:3px solid var(--warm);">
+            <h3>{{CHALLENGE_2_TITLE}}</h3>
+            <p class="small muted">{{CHALLENGE_2_TEXT}}</p>
+            <p class="tiny"><span class="pill warm">{{CHALLENGE_2_TAG}}</span></p>
+          </div>
+        </div>
+        <aside class="notes"><p>{{CHALLENGES_NARRATIVE}}</p></aside>
+      </section>
+
+      <!-- N+4 · LESSONS (from sprint-input.md) -->
+      <section>
+        <span class="eyebrow">Lessons</span>
+        <h2>What this sprint <span class="grad">taught us</span></h2>
+        <ul class="checklist small">
+          <li><b>{{LESSON_1_HEAD}}</b> {{LESSON_1_BODY}}</li>
+          <li><b>{{LESSON_2_HEAD}}</b> {{LESSON_2_BODY}}</li>
+          <li><b>{{LESSON_3_HEAD}}</b> {{LESSON_3_BODY}}</li>
+          <li><b>{{LESSON_4_HEAD}}</b> {{LESSON_4_BODY}}</li>
+        </ul>
+        <aside class="notes">
+          <p>If you remember nothing else from this deck, remember these.</p>
+          <p>{{LESSONS_NARRATIVE}}</p>
+        </aside>
+      </section>
+
+      <!-- N+5 · NEXT -->
+      <section>
+        <span class="eyebrow">Next Sprint</span>
+        <h2>What comes <span class="grad">next</span></h2>
+        <div class="grid g3" style="margin-top:14px;">
+          <div class="card"><h3>{{NEXT_1_TITLE}}</h3><p class="tiny muted">{{NEXT_1_TEXT}}</p></div>
+          <div class="card"><h3>{{NEXT_2_TITLE}}</h3><p class="tiny muted">{{NEXT_2_TEXT}}</p></div>
+          <div class="card"><h3>{{NEXT_3_TITLE}}</h3><p class="tiny muted">{{NEXT_3_TEXT}}</p></div>
+        </div>
+        <aside class="notes"><p>{{NEXT_NARRATIVE}}</p></aside>
+      </section>
+
+      <!-- N+6 · CLOSING -->
+      <section data-background-color="#081226">
+        <div class="center">
+          <span class="eyebrow">{{SPRINT_RANGE}} · Delivered</span>
+          <h1>{{CLOSING_PLAIN}} <span class="grad">{{CLOSING_ACCENT}}</span></h1>
+          <p class="lead" style="margin-top:22px;">{{CLOSING_LINE_1}}<br/>{{CLOSING_LINE_2}}</p>
+          <div class="stripe center-block"></div>
+          <p class="small muted" style="margin-top:36px;">Questions? Happy to go deeper on any of it. 🙌</p>
+        </div>
+        <div class="footer"><span>{{FOOTER_LEFT}}</span><span>Thank you</span></div>
+        <aside class="notes">
+          <p>{{CLOSING_NARRATIVE}}</p>
+          <p>Happy to go deeper on any of it — {{LIKELY_QUESTIONS}} are the most likely to spark discussion.</p>
+        </aside>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      transition: 'slide',
+      transitionSpeed: 'default',
+      backgroundTransition: 'fade',
+      slideNumber: 'c/t',
+      width: 1280,
+      height: 760,
+      margin: 0.06,
+      pdfSeparateFragments: false,
+      plugins: [ RevealHighlight, RevealNotes ]
+    });
+  </script>
+</body>
+</html>
