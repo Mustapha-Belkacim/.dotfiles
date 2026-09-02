@@ -2,3 +2,4 @@
 copilot/.copilot/jira.env
 copilot/.copilot/copilot-instructions.md
 agents/.agents/skills/*/config.env
+git/.config/git/secret-patterns

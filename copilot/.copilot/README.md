@@ -4,9 +4,8 @@ My lean, cross-project GitHub Copilot CLI configuration. Loaded automatically fo
 **every** project. Repo-level config (`AGENTS.md`, `.github/instructions/**`) always
 takes precedence when it conflicts.
 
-Philosophy borrowed from spec-first / "vibe coding" workflows (Peter Steinberger) and
-the verification gates from the team's `analytics-and-ai-app-dev-chapter` configs —
-kept deliberately minimal.
+Philosophy borrowed from spec-first / "vibe coding" workflows (Peter Steinberger),
+plus explicit verification gates — kept deliberately minimal.
 
 ## What's here
 
