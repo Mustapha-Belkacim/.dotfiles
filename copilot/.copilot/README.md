@@ -34,7 +34,8 @@ built-in `code-review` agent in a fix-and-re-check loop rather than replacing it
 ## Tuning
 
 - Add personal skills under `~/.agents/skills/<name>/SKILL.md` (auto-loaded by
-  relevance, and harness-independent). They live in the sibling `agents` stow package,
-  not here — see `~/.dotfiles/agents/.agents/README.md`.
+  relevance, and harness-independent). They live in a **separate private repo**
+  (`~/.agents`), not here — see its README. Anything employer-specific belongs
+  there, never in this public repo.
 - For more autonomy, run with `--yolo` / `/autopilot`; for parallel subagents, `/fleet`.
 - Keep this lean — only add an agent/skill when a built-in can't already do the job.
