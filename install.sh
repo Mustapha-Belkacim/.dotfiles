@@ -32,6 +32,17 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 add-apt-repository ppa:lazygit-team/release
 apt update
 apt install lazygit
+# github cli — official repo, the Ubuntu one lags several minor versions behind
+mkdir -p -m 755 /etc/apt/keyrings
+wget -qO- https://cli.github.com/packages/githubcli-archive-keyring.gpg >/etc/apt/keyrings/githubcli-archive-keyring.gpg
+chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" >/etc/apt/sources.list.d/github-cli.list
+apt update
+apt install gh
+# No root on this box? Same binary, userspace:
+#   V=$(curl -fsSL https://api.github.com/repos/cli/cli/releases/latest | grep -oP '"tag_name": "v\K[^"]+')
+#   curl -fsSL "https://github.com/cli/cli/releases/download/v$V/gh_${V}_linux_amd64.tar.gz" \
+#     | tar xz -C /tmp && install -m755 "/tmp/gh_${V}_linux_amd64/bin/gh" ~/.local/bin/gh
 apt install heroku
 apt install inotify-tools
 apt install nasm

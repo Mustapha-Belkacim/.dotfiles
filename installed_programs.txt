@@ -39,6 +39,9 @@ lazygit
     sudo add-apt-repository ppa:lazygit-team/release
     sudo apt-get update
     sudo apt-get install lazygit
+gh (github cli)
+    official repo — see install.sh; the Ubuntu package lags behind
+    userspace, no root: extract the release tarball into ~/.local/bin
 docker
 docker-compose
 python
