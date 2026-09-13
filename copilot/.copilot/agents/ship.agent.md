@@ -19,6 +19,7 @@ tools:
   - list_agents
   - read_agent
   - write_agent
+  - atlassian/*
 ---
 
 # Ship
