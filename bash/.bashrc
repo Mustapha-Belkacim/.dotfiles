@@ -115,4 +115,3 @@ if command -v ng &>/dev/null; then
   source <(ng completion script)
 fi
 source ~/.local/share/blesh/ble.sh
-export PATH="$PATH:/opt/nvim-linux64/bin"
