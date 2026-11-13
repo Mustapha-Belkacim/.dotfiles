@@ -118,4 +118,6 @@ apt install obs-studio
 # uv python package manager
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
+sudo apt install latexmk
+
 apt autoremove
