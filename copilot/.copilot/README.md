@@ -12,9 +12,7 @@ plus explicit verification gates — kept deliberately minimal.
 | File | Purpose |
 |------|---------|
 | `copilot-instructions.md` | Core operating principles applied to every session: code-is-cheap iteration, spec-before-code, tight feedback loops, delegate/parallelize, clean shipping. |
-| `agents/spec.agent.md` | **Spec** — turns a rough idea into a build-ready spec, then stress-tests it with an AI peer-review loop. Writes a spec doc; does not write code. |
-| `agents/ship.agent.md` | **Ship** — implement → verify → fix → commit with a hard test/build gate. Language-agnostic. |
-| `agents/harden.agent.md` | **Harden** — agentic review-and-fix loop: review → triage → fix → re-review (fresh eyes each pass) until the diff is clean or the iteration cap is hit. Edits code (unlike read-only `/review`). |
+| `agents/` | Not here any more: the **Spec**, **Ship** and **Harden** agents live in the private, harness-independent `~/.agents` repo (`~/.agents/agents`), and its `install.sh` points `~/.copilot/agents` (and `~/.claude/agents`) there. |
 
 I intentionally rely on the CLI's **built-in** agents (explore, task, general-purpose,
 code-review, research, rubber-duck) instead of recreating them. **Harden** wraps the
