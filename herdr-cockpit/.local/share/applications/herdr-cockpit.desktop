@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Agent Cockpit
+GenericName=Herdr in Ghostty
+Comment=Open Ghostty straight into Herdr
+Exec=ghostty --class=dev.herdr.cockpit -e herdr
+Icon=com.mitchellh.ghostty
+Terminal=false
+Categories=System;TerminalEmulator;
+StartupNotify=true
+StartupWMClass=dev.herdr.cockpit

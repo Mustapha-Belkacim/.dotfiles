@@ -1,0 +1,40 @@
+# Ghostty — shared config (Linux + macOS). Keep OS-specific bits out of here.
+# Docs: `ghostty +show-config --default --docs`
+#
+# Per-OS overrides come from separate stow packages, stowed only on their OS:
+#   Linux: stow --no-folding ghostty ghostty-linux
+#   macOS: stow --no-folding ghostty ghostty-macos
+# The leading `?` makes a missing include a no-op. Includes load after this
+# whole file, so they override anything set here.
+config-file = ?config-linux
+config-file = ?config-macos
+
+# Keyboard protocol: deliberately left at Ghostty's defaults (kitty keyboard
+# protocol available to apps that request it) so keys reach Herdr/Neovim intact.
+
+# Free key chords that Herdr / Neovim should receive instead of Ghostty.
+# Herdr does pane/tab management, so Ghostty's own split/tab chords are unused.
+# Herdr prefix is ctrl+\ — Ghostty has no default binding for it.
+keybind = ctrl+alt+arrow_up=unbind
+keybind = ctrl+alt+arrow_down=unbind
+keybind = ctrl+alt+arrow_left=unbind
+keybind = ctrl+alt+arrow_right=unbind
+keybind = ctrl+alt+shift+j=unbind
+# alt+1..9 (Herdr's suggested prefix+alt+1..9 agent focus, Neovim <A-…> maps).
+keybind = alt+1=unbind
+keybind = alt+2=unbind
+keybind = alt+3=unbind
+keybind = alt+4=unbind
+keybind = alt+5=unbind
+keybind = alt+6=unbind
+keybind = alt+7=unbind
+keybind = alt+8=unbind
+keybind = alt+9=unbind
+keybind = alt+digit_1=unbind
+keybind = alt+digit_2=unbind
+keybind = alt+digit_3=unbind
+keybind = alt+digit_4=unbind
+keybind = alt+digit_5=unbind
+keybind = alt+digit_6=unbind
+keybind = alt+digit_7=unbind
+keybind = alt+digit_8=unbind

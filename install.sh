@@ -120,4 +120,10 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 sudo apt install latexmk
 
+# herdr — terminal multiplexer for coding agents (no apt/snap package; official
+# installer drops a checksum-verified binary in ~/.local/bin). Then:
+#   stow --no-folding herdr ghostty ghostty-linux herdr-cockpit
+#   herdr integration install claude
+curl -fsSL https://herdr.dev/install.sh | sh
+
 apt autoremove

@@ -1,0 +1,7 @@
+# Ghostty — Linux-only overrides (included from config.ghostty).
+font-family = "JetBrainsMono Nerd Font Mono"
+font-size = 12
+
+# Initial window size in cells (optional).
+# window-width = 160
+# window-height = 45

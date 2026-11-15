@@ -2,3 +2,8 @@
 copilot/.copilot/jira.env
 copilot/.copilot/copilot-instructions.md
 git/.config/git/secret-patterns
+
+# herdr: only config.toml is tracked; runtime files (sockets, logs, session
+# state) must stay in the real ~/.config/herdr, never in this package.
+herdr/.config/herdr/*
+!herdr/.config/herdr/config.toml

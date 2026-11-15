@@ -1,0 +1,18 @@
+# herdr configuration — shared between Linux and macOS, keep it OS-neutral.
+# Full reference: `herdr --default-config` / https://herdr.dev/docs
+# Validate after editing: `herdr config check`; apply: `herdr server reload-config`.
+#
+# Stow note: only this file is symlinked. ~/.config/herdr itself must stay a
+# real directory (sockets, logs, session state live there) — stow with
+# `stow --no-folding herdr`.
+
+# Skip the first-run notification setup screen. Herdr would otherwise prompt on
+# every machine until it saves a choice, and that write could clobber the
+# stow symlink.
+onboarding = false
+
+[keys]
+# Default ctrl+b is page-up in Neovim; ctrl+s (the usual alternative) is
+# "save file" in LazyVim and "stash prompt" in Claude Code. ctrl+\ is unbound
+# in LazyVim, Ghostty and Claude Code.
+prefix = "ctrl+backslash"
