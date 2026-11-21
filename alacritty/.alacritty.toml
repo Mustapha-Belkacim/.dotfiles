@@ -11,7 +11,7 @@ decorations = "Buttonless"
 
 [font]
 normal.family = "JetBrainsMono Nerd Font"
-size = 14
+size = 12
 offset = { x = 0, y = 3 }
 
 [scrolling]
