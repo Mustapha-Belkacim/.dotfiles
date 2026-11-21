@@ -1,3 +1,5 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/home/mustapha/.zsh/completions:"* ]]; then export FPATH="/home/mustapha/.zsh/completions:$FPATH"; fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -131,3 +133,4 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
+. "/home/mustapha/.deno/env"

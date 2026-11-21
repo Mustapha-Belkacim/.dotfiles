@@ -33,3 +33,4 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 
 ssh-add --apple-load-keychain &>/dev/null
+. "/home/mustapha/.deno/env"
